@@ -71,10 +71,10 @@ int main(void)
     do {
         int linha, coluna;
         mostra_sessao(&filme);
-        printf("Digite a linha da poltrona desejada:");
+        printf("Selecione a linha da poltrona desejada:");
         fgets(buffer, 250, stdin);
         sscanf(buffer, "%i", &linha);
-        printf("Digite a coluna da poltrona desejada:");
+        printf("Selecione a coluna da poltrona desejada:");
         fgets(buffer, 250, stdin);
         sscanf(buffer, "%i", &coluna);
         if (linha-1 >= 0 && linha-1 < 4 &&
@@ -85,7 +85,7 @@ int main(void)
                 fprintf(file, "\n%s - Linha %d - Coluna %d", &filme, coluna, linha);
                 fclose(file);
             } else {
-                printf("A poltrona ja esta ocupada!\n");
+                printf("Sua poltrona foi selecionada!\n");
             }
         } else {
             printf("poltrona invalida!\n");
